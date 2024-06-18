@@ -161,31 +161,11 @@ function validateInputs(name, phone, email, streetAddress, city, stateProvince, 
         return false;
     }
 
-    if (!addressPattern.test(streetAddress)) {
-        alert('Please enter a valid street address (alphanumeric characters, spaces, common punctuation, 5-200 characters).');
-        return false;
-    }
+    
 
-    if (!cityPattern.test(city)) {
-        alert('Please enter a valid city (alphabetic characters, spaces, 2-100 characters).');
-        return false;
-    }
+    
 
-    if (!stateProvincePattern.test(stateProvince)) {
-        alert('Please enter a valid state/province (alphabetic characters, spaces, 2-100 characters).');
-        return false;
-    }
-
-    if (!postalCodePattern.test(postalCode)) {
-        alert('Please enter a valid ZIP/postal code (alphanumeric characters, 3-15 characters).');
-        return false;
-    }
-
-    if (!countryPattern.test(country)) {
-        alert('Please enter a valid country (alphabetic characters, spaces, 2-100 characters).');
-        return false;
-    }
-
+   
     return true;
 }
 
@@ -297,7 +277,7 @@ function populateEditForm(contact) {
     document.getElementById('editEmail').value = contact.email;
     document.getElementById('editGender').value = contact.gender;
     document.getElementById('editGroup').value = contact.group_name;
-    document.getElementById('editGroup').value = contact.group_name;
+
 
 }
 
@@ -355,7 +335,7 @@ function setupEditForm() {
 
 
 
-function enableEditMode(nameDiv, phoneDiv, genderSpan, emailSpan, groupSpan, streetSpan, citySpan, stateSpan, zipSpan, countrySpan, editIcon, saveIcon, img, fileInput) {
+function enableEditMode(nameDiv, phoneDiv, genderSpan, emailSpan, groupSpan,  editIcon, saveIcon, img, fileInput) {
     editIcon.classList.add('d-none');
     saveIcon.classList.remove('d-none');
     nameDiv.contentEditable = true;
@@ -367,7 +347,7 @@ function enableEditMode(nameDiv, phoneDiv, genderSpan, emailSpan, groupSpan, str
     fileInput.classList.remove('d-none');
 }
 
-function saveContactChanges(nameDiv, phoneDiv, genderSpan, emailSpan, groupSpan, streetSpan, citySpan, stateSpan, zipSpan, countrySpan, saveIcon, editIcon, img, fileInput) {
+function saveContactChanges(nameDiv, phoneDiv, genderSpan, emailSpan, groupSpan, saveIcon, editIcon, img, fileInput) {
     editIcon.classList.remove('d-none');
     saveIcon.classList.add('d-none');
     nameDiv.contentEditable = false;
