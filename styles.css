@@ -1,0 +1,134 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    background-color: #323235;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(223, 217, 217, 0.1);
+    height: 4.5rem;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.header-title {
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 0.75rem;
+}
+
+.card.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.card-title .material-icons {
+    font-size: 1.8rem;
+    margin-bottom: -5px;
+}
+
+.form-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #6c757d;
+}
+
+.minimal-input {
+    border: none;
+    border-bottom: 2px solid #ced4da;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    padding: 0.5rem 0.75rem;
+}
+
+.minimal-input:focus {
+    border-color: #007bff;
+    box-shadow: none;
+}
+
+.custom-file-label::after {
+    content: "Browse";
+}
+
+.contact-tile {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 0.60rem; 
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem; 
+}
+
+.contact-tile img {
+    width: 4rem; 
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.contact-tile .contact-name {
+    font-size: 1rem; 
+    font-weight: bold;
+}
+
+.contact-tile .contact-phone {
+    color: #6c757d;
+}
+
+.img-thumbnail {
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+@media (max-width: 576px) {
+    .contact-tile img {
+        width: 3rem; 
+        height: 3rem;
+    }
+
+    .contact-tile .contact-name {
+        font-size: 0.875rem; 
+    }
+
+    .contact-tile .contact-phone {
+        font-size: 0.75rem; 
+    }
+}
+
+
+
+.contact-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+}
+
+.contact-details.show {
+    max-height: 100px; 
+    opacity: 1;
+}
+
+
+.img-thumbnail {
+    max-width: 100px; /* Adjust as per your design */
+    height: auto;
+}
+
+.d-none {
+    display: none !important;
+}
